@@ -17,6 +17,8 @@ Switch statements are a more efficient way to code when testing _multiple_ condi
 - The switch expression is evaluated once.
 - The value of the expression is compared with the value of each case in order.
 - If there is a match, the associated block of code is executed.
+
+///put most common outcome first; best practice
 - A default case can be defined when the expression does not match a case.
 
 ---
@@ -28,7 +30,7 @@ switch (time) {
     case 6:
         console.log('Wake up!');
         alarm();
-        break;
+        break; //means stop looking at cases now, return used instead only in exceptional cases
     case 22:
         console.log('off to bed');
         turnOffComputer();
@@ -45,7 +47,7 @@ switch (time) {
 ### `break` vs `return`
 
 - `break` will _break_ out of the switch case.
-- Without a `break`, the following cases will also be evaluated.
+- Without a `break`, the following cases will also be evaluated (regardless of following case values).
 - `return` will stop the rest of the function from being evaluated.
 
 ---

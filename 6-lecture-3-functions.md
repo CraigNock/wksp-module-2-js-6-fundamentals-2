@@ -18,7 +18,28 @@ is a variable in function, or method, definition.
 
 ```js
 // Example
+function greeting(name) {
+    return `${name}! Want some bacon?`;
+}
 
+greeting('daniel');
+///
+function greeting(names) {
+    names.forEach(function(name) {
+        console.log (`${name}! Want some bacon?`;)
+    });
+}
+
+greeting(['daniel','bob','clara']);
+///
+function greeting(names) {
+    return names.map(function(name) {
+        return `${name}! Want some bacon?`;
+    });
+    return x
+}
+
+console.log (greeting(['daniel','bob','clara']));
 ```
 
 ---
@@ -42,6 +63,7 @@ function f() {
 }
 
 f("bye");
+/// will just log hello, js don't gaf
 ```
 
 ---
@@ -84,15 +106,25 @@ const someFunc = function() {
 This will _define_ a function expression.
 
 ⚠️ **Function expressions are NOT hoisted.**
+// does not preload function
 
 ---
 
 The third way is an arrow function
 
 ```js
-someFunc = () => {
+someFunc = (a , b) => {
     // do something...
 }
+//
+names.forEach((name) => console.log(name));
+//
+//
+names.map((name) => `Hi ${name}`);
+//same as
+names.map((name) => {
+    return `Hi ${name}`
+});
 ```
 
 This is equivalent to the previous way of _defining_ a function. 
@@ -102,6 +134,7 @@ This is equivalent to the previous way of _defining_ a function.
 ---
 
 As of now, you are free to use the syntax you wish.
+//95% of the time it doesn't effect anything
 
 I will let you know when to _not_ use a particular syntax.
 
@@ -114,8 +147,13 @@ I will let you know when to _not_ use a particular syntax.
 someFunc = () => {
     return 'bacon';
 }
+//
+otherFunc = (string) => {
+    return string.split();
+}
 
-console.log(someFunc());
+
+console.log(otherFunc(someFunc()));
 ```
 
 `return` is the end of the line...

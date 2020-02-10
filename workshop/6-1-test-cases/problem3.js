@@ -9,6 +9,14 @@ let verifyEquals = require('../../assets/verify-equals');
 // You can use the typeof function to check the type of each element (e.g. typeof 3 returns 'number')
 
 function f(input) {
+    if (typeof(input) !== 'object' 
+    || input.length !== 2 
+    || typeof(input[0]) !== 'number' 
+    || typeof(input[1]) !== 'number') {
+        return undefined;
+    }
+    let sum = input[0] + input[1];
+    return sum;
 
 }
 
@@ -16,8 +24,8 @@ function f(input) {
 // We need 7 test cases. The first input is provided.
 // Don't forget to test all of the question parameters
 
-let inputs = [[2, 4], [-3, 3]];
-let outputs = [6, 0];
+let inputs = [[2, 4], [-3, 3], [-3, -3], 1, undefined, [1, 2, 3], [1]];
+let outputs = [6, 0, -6, undefined, undefined, undefined, undefined];
 
 // Step 3
 // Run this file in the debugger.
