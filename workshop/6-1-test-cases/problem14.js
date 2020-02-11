@@ -21,16 +21,20 @@ let verifyEquals = require('../../assets/verify-equals');
 // even though there is a space before the a in adipisicing
 
 function f(str) {
+  let passage = '';
   let letts = str.split('');
-  let passage = ''
   for (let i=0; i<letts.length; i++ ){
-    if (i < 40){
-      
-
+    if ((i+1) % 40 === 0){
+      passage += '\n';
+      if(letts[i] !== ' ') {
+        passage += letts[i];
       }
-
+    } else {
+      passage += letts[i];
     }
-  }
+  };
+  return passage;
+}
 
 
 
@@ -61,11 +65,11 @@ function f(str) {
   // console.log(fullBlock);
   // return fullBlock;
   
-}
+
 
 // Test cases
 let inputs = ["Lorem ipsumos dolor sit amet consectetur adipisicing elit. Magni quisquam"];
-let outputs = ["Lorem ipsumos dolor sit amet consectetur/nadipisicing elit. Magni quisquam"];
+let outputs = ["Lorem ipsumos dolor sit amet consectetur\nadipisicing elit. Magni quisquam"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.
