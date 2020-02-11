@@ -22,31 +22,44 @@ let verifyEquals = require('../../assets/verify-equals');
 
 function f(str) {
   let letts = str.split('');
-  console.log(letts);
-  let linArr = [];
-  let block = [];
-  for (i=0 ; i < letts.length; i++){
-    if (i < 39){
-      linArr.push(letts[i]);
-    }else if (letts[i] === ' '){
-      console.log('space removed')
-    } else {
-      block.push(linArr);
-      linArr = [];
-      linArr.push(letts[i]);
+  let passage = ''
+  for (let i=0; i<letts.length; i++ ){
+    if (i < 40){
+      
+
+      }
+
     }
   }
-  console.log("block " + block)
-  ///combine lines
-  let cleanBlock = block.map(function(lineForm){
-    lineForm.join('');
-  });
-  console.log(cleanBlock);
-  //combine lines, adding breaks
-  let fullBlock = cleanBlock.join('/n')
-  //return
-  console.log(fullBlock);
-  return fullBlock;
+
+
+
+
+  // console.log(letts);
+  // let linArr = [];
+  // let block = [];
+  // for (i=0 ; i < letts.length; i++){
+  //   if (i < 39){
+  //     linArr.push(letts[i]);
+  //   }else if (letts[i] === ' '){
+  //     console.log('space removed')
+  //   } else {
+  //     block.push(linArr);
+  //     linArr = [];
+  //     linArr.push(letts[i]);
+  //   }
+  // }
+  // console.log("block " + block)
+  // ///combine lines
+  // let cleanBlock = block.map(function(lineForm){
+  //   lineForm.join('');
+  // });
+  // console.log(cleanBlock);
+  // //combine lines, adding breaks
+  // let fullBlock = cleanBlock.join('/n')
+  // //return
+  // console.log(fullBlock);
+  // return fullBlock;
   
 }
 
