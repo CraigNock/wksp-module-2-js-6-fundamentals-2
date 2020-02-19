@@ -13,12 +13,25 @@ let verifyEquals = require('../../assets/verify-equals');
 //    - A for loop might be helpful
 
 function f(str) {
-
+    if(typeof(str) !== 'string'){
+        return undefined;
+    };
+    if(str === '' || str === ' '){
+        return '';
+    };
+    let arr = str.split(' ');
+    let long = '';
+    arr.forEach(word => {
+        if (word.length >= long.length){
+            long = word;
+        }
+    });
+    return long;
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = ['can you believe', 'this weather', 'how bout that', 'local sports team', '', ' '];
+let outputs = ['believe', 'weather', 'that', 'sports', '', ''];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

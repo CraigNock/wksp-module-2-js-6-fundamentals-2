@@ -22,13 +22,15 @@ console.log(greeting);
 var greeting = 'Hello';
 
 // a. 'Hello'
-// b. undefined
+// b. undefined ***this one
 // c. Uncaught ReferenceError: greeting is not defined
 ```
 
 ---
 
-It is only the variable declarations that get moved to the top, not the actual value given to the variable.
+It is only the variable declarations that get moved to the top, not the ACTUAL VALUE given to the variable.
+
+variable exists, that's it
 
 ---
 
@@ -39,7 +41,7 @@ const anotherGreeting = 'Good evening';
 
 // a. 'Good evening'
 // b. undefined
-// c. ReferenceError: can't access lexical declaration `anotherGreeting' before initialization
+// c. ReferenceError: can't access lexical declaration `anotherGreeting' before initialization ****this one
 ```
 
 ---
@@ -51,7 +53,7 @@ let yetAnotherGreeting = 'Goodnight';
 
 // a. 'Good evening'
 // b. undefined
-// c. ReferenceError: can't access lexical declaration `anotherGreeting' before initialization
+// c. ReferenceError: can't access lexical declaration `anotherGreeting' before initialization ****this one
 ```
 
 ---
@@ -72,6 +74,6 @@ var yourName = 'Fred';
 
 ---
 
-Of note, it is not the declarations themselves that are moved to the top, just the JS compiler that reading them first and alloting them memory space.
+Of note, it is not the declarations themselves that are moved to the top, just the JS compiler reading them first and alloting them memory space.
 
 ---

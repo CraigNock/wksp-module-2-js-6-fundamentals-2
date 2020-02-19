@@ -25,7 +25,7 @@ We spend lots of time doing other things as well.
 - Typos
 - Forgot to pass an argument
 - Pass the wrong type of data as an argument
-- Make wrong assumptions
+- Make wrong assumptions 
 - etc.
 
 ---
@@ -101,13 +101,40 @@ _It's one of the most important parts of this course._
 ---
 
 - What is it?
+
+//
 - Why do we do it?
+
+//future proofing your code?
+
 - When do we do it?
 
+//
+
 _Let's talk about test-driven development a little._
+
+// starts with tests (make or conceptualise), then builds apps etc based off those tests.
+//developer centric philosophy
+// as opposed to build then add tests
 
 ---
 
 ### What is a test?
+```js
+//example
+function sum(num1, num2) {
+    return num1 + num2;
+}
+
+//A test
+funtion sumTest(x,y,z) {
+    return sum(x,y) === z; // note test runs the original function
+}
+
+//A test case
+sumTest(5,5,10);
+
+
+```
 
 ---

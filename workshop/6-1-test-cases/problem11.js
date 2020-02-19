@@ -1,4 +1,4 @@
-let verifyEquals = require('./verify-equals.js');
+let verifyEquals = require('../../assets/verify-equals');
 
 // Problem 11
 // ----------
@@ -6,12 +6,30 @@ let verifyEquals = require('./verify-equals.js');
 // If any element in the array is not a number, skip it. If the array is empty, return zero.
 
 function f(arr) {
+    if (typeof(arr) !== 'object') {
+        return undefined;
+    }
 
+    let sum = 0
+    arr.forEach(num => {
+        switch (typeof(num)) {
+            case 'number':
+                sum += num;
+                break;
+            case 'undefined':
+                sum = sum;
+                break;
+            default:
+                return 0;
+                break;
+        }
+    });
+    return sum;
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = [[1,2,3],[1,'2', 3], [undefined, 2, 3], [], [0,0,0]];
+let outputs = [6, 4, 5, 0, 0];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.
